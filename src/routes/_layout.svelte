@@ -3,6 +3,7 @@
   import Sidebar from '../components/Sidebar.svelte'
   import { findPage } from '../services/page'
   import { currentPage } from '../store'
+
   export let segment = 'home'
   let open = false
 
@@ -13,11 +14,13 @@
   }
 </script>
 
-<style>
-  :global(body) {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #444;
+<style lang="scss">
+  :global {
+    @import '../styles/global.scss';
+    body {
+      font-family: $default-font;
+      color: $text-color;
+    }
   }
 </style>
 

@@ -2,7 +2,7 @@
   export let open = false
 </script>
 
-<style>
+<style lang="scss">
   button {
     display: block;
     border: none;
@@ -13,28 +13,22 @@
   }
   svg {
     transition: transform 0.3s ease-in-out;
-  }
-
-  svg line {
-    stroke: #666;
-    stroke-width: 2;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .open svg line {
-    stroke: #666;
-  }
-
-  .open #top {
-    transform: translate(6px, 0px) rotate(45deg);
-  }
-
-  .open #middle {
-    opacity: 0;
-  }
-
-  .open #bottom {
-    transform: translate(-12px, 9px) rotate(-45deg);
+    line {
+      stroke: $text-color;
+      stroke-width: 2;
+      transition: all 0.3s ease-in-out;
+      .open & {
+        &#top {
+          transform: translate(6px, 0px) rotate(45deg);
+        }
+        &#middle {
+          opacity: 0;
+        }
+        &#bottom {
+          transform: translate(-12px, 9px) rotate(-45deg);
+        }
+      }
+    }
   }
 </style>
 
