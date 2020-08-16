@@ -1,14 +1,14 @@
 <script>
   import Logo from './Logo.svelte'
-  // import Menu from './Menu.svelte'
+  import Menu from './Menu.svelte'
 </script>
 
-<style>
+<style lang="scss">
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: $spacer;
   }
   .grow {
     flex-grow: 1;
@@ -17,6 +17,6 @@
 
 <header class="container">
   <Logo />
+  <Menu />
   <div class="grow" />
-  <!-- <Menu /> -->
 </header>
